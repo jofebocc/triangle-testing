@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assigment6.1</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">import java.util.Scanner;
+
+<span class="nc" id="L3">public class Main {</span>
+    public static void main(String[] args){
+<span class="nc" id="L5">        double x2 = 0;</span>
+<span class="nc" id="L6">        double y2 = 0;</span>
+<span class="nc" id="L7">        double x3 = 0;</span>
+<span class="nc" id="L8">        double y3 = 0;</span>
+<span class="nc" id="L9">        double x = 0;</span>
+<span class="nc" id="L10">        double y = 0;</span>
+<span class="nc" id="L11">        double D1 = 0;</span>
+<span class="nc" id="L12">        double D2 = 0;</span>
+<span class="nc" id="L13">        double D3= 0 ;</span>
+<span class="nc" id="L14">        int flag = 0;</span>
+
+<span class="nc" id="L16">        Scanner in = new Scanner(System.in);</span>
+<span class="nc bnc" id="L17" title="All 2 branches missed.">        while (flag == 0) {</span>
+//            System.out.println(&quot;add sides&quot;);
+//            a = in.nextInt();
+//            b = in.nextInt();
+//            c = in.nextInt();
+<span class="nc" id="L22">            System.out.println(&quot;add points &quot;);</span>
+<span class="nc" id="L23">            System.out.println(&quot;Point 1&quot;);</span>
+<span class="nc" id="L24">            x = in.nextInt();</span>
+<span class="nc" id="L25">            y = in.nextInt();</span>
+<span class="nc" id="L26">            System.out.println(&quot;Point 2&quot;);</span>
+<span class="nc" id="L27">            x2 = in.nextInt();</span>
+<span class="nc" id="L28">            y2 = in.nextInt();</span>
+<span class="nc" id="L29">            System.out.println(&quot;Point 3&quot;);</span>
+<span class="nc" id="L30">            x3 = in.nextInt();</span>
+<span class="nc" id="L31">            y3 = in.nextInt();</span>
+<span class="nc bnc" id="L32" title="All 12 branches missed.">            if (x &lt;= 0 || y &lt;= 0 || x2 &lt;= 0 || y2 &lt;= 0 || x3 &lt;= 0 || y3 &lt;= 0){</span>
+<span class="nc" id="L33">                System.out.println(&quot;Syntax incorrect add new points&quot;);</span>
+            }
+            else {
+<span class="nc" id="L36">                flag = 1;</span>
+            }
+        }
+
+<span class="nc" id="L40">        Triangle num = new Triangle();</span>
+<span class="nc" id="L41">        Point punto1 = new Point(x , y);</span>
+<span class="nc" id="L42">        Point punto2 = new Point(x2 , y2);</span>
+<span class="nc" id="L43">        Point punto3 = new Point(x3 , y3);</span>
+        //distance 1
+<span class="nc" id="L45">        D1 = punto1.distance(punto2);</span>
+<span class="nc" id="L46">        D2 = punto1.distance(punto3);</span>
+<span class="nc" id="L47">        D3 = punto2.distance(punto3);</span>
+
+<span class="nc" id="L49">        num.TriangleSides(D1 ,D2, D3);</span>
+<span class="nc" id="L50">        num.TriangleAngle(D1,D2,D3);</span>
+
+<span class="nc" id="L52">        System.out.println(num.getArea(D1 , D2 , D3));</span>
+
+<span class="nc" id="L54">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
